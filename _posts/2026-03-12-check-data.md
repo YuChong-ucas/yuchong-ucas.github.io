@@ -1,7 +1,7 @@
 ---
 title: LLM的塌缩
 author: yuchong
-date: 2026-03-12 16:34:00 +0800
+date: 2026-03-12 01:34:00 +0800
 categories: [AI, Quantum Mechanics]
 tags: [LLM, Turing Test, Quantum Mechanics]
 math: true
@@ -16,3 +16,4 @@ math: true
 提出好问题的能力尤其重要，同一个现象，不同人，提出的问题就不一样，模型所展现的智能也不一样，由此可以算作反映人的智能，也就是反向图灵测试。
 
 自回归 LM 与扩散 LM？
+
