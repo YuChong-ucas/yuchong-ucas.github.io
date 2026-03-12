@@ -1,7 +1,7 @@
 ---
-title: LLM 的反向图灵测试，与量子力学量子态塌缩2
+title: LLM，与量子力学量子态塌缩2
 author: yuchong
-date: 2026-03-12 16:10:00 +0800
+date: 2026-03-12 16:50:00 +0800
 categories: [AI, Quantum Mechanics]
 tags: [LLM, Turing Test, Quantum Mechanics]
 ---
