@@ -1,10 +1,9 @@
 ---
 title: LLM 的反向图灵测试，与量子力学量子态塌缩
+author: yuchong
 date: 2026-03-12 16:10:00 +0800
 categories: [AI, Quantum Mechanics]
 tags: [LLM, Turing Test, Quantum Mechanics]
-math: true
-# mathjax: true
 ---
 
 大语言模型可能像一面镜子，实际反映的是使用者的智力水平，这构成了一种反向图灵测试。
