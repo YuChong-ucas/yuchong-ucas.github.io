@@ -10,14 +10,16 @@ math: true
 # 线性AR算法
 
 在几年前，我做过一个深度图算法优化的项目。**问题背景** ：我们有采集+开源（～10W）depth+RGB pair对数据集，但是由于depth获取的物理原理（结构光，TOF等）原因，depth一般质量很差，孔洞，噪声，边缘模糊等。我们如何优化depth呢？其可以写为一个最优化问题：
+
 $$
 \min \quad E(x) = \sum_{i=1}^{N} \sum_{j \in \mathcal{N}(i)} w_{ij}(x_i - x_j)^2 + \alpha \sum_{i \in \Omega} (x_i - \hat{x}_i)^2
 $$
+
 其中：
-- $\alpha$ 是惩罚因子；
-- $athcal{N}(i)$ 是以 $x_i$ 中心点的临域为中心点的 $n$ 邻域；
-- $\hat{x}_i$ 表示坐标点 $i$ 处depth 优化前真实值；
-- $x_i$ 表示优化后的目标depth；
+- $\alpha$  是惩罚因子；
+- $athcal{N}(i)$  是以 $x_i$ 中心点的临域为中心点的 $n$ 邻域；
+- $\hat{x}_i$  表示坐标点 $i$ 处depth 优化前真实值；
+- $x_i$  表示优化后的目标depth；
 - 已知观测集合： $\Omega \subset \{1, \ldots, N\}$ .
 
 该最优化的含义是：要求输出depth忠实于GT值，并且要求优化后的depth在其邻域里是足够平滑的。
@@ -25,17 +27,18 @@ $$
 上述最优化方程求导，我们有：
 
 **第一项：**
+
 $$
 E_s = \sum_i \sum_{j \in \mathcal{N}(i)} w_{ij}(x_i - x_j)^2
 $$
 
-（1）$i=k$ :
+(1) $i=k$ :
 
 $$
 \frac{\partial}{\partial x_k} w_{kj}(x_k - x_j)^2 = 2w_{kj}(x_k - x_j)
 $$
 
- (2) $j=k$ :
+(2) $j=k$ :
 
 $$
 \frac{\partial}{\partial x_k} w_{ik}(x_i - x_k)^2 = -2w_{ik}(x_i - x_k) = 2w_{ik}(x_k - x_i)
