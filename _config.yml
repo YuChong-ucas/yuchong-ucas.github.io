@@ -102,6 +102,8 @@ cdn: "https://chirpy-img.netlify.app"
 # the avatar on sidebar, support local or CORS resources
 # avatar: "/commons/avatar.jpg"
 
+img_cdn: https://testingcf.jsdelivr.net/gh/winxuan/winxuan.github.io
+
 avatar: "https://upload.wikimedia.org/wikipedia/commons/5/5f/HubbleDeepField.800px.jpg"
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
