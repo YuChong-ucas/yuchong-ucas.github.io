@@ -126,7 +126,8 @@ def forward(
     query = self._split_heads(query, self.num_heads, self.head_dim)
     key = self._split_heads(key, self.num_heads, self.head_dim)
     value = self._split_heads(value, self.num_heads, self.head_dim)
-
+    
+    # KV Cache
     if layer_past is not None:
         past_key, past_value = layer_past
         key = torch.cat((past_key, key), dim=-2)
