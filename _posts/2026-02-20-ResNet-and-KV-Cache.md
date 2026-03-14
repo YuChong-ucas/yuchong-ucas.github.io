@@ -150,7 +150,8 @@ def forward(
     return outputs  # a, present, (attentions)
 ```
 
-# 【小结】     
+# 【小结】 
+    
 这些算法设计的本质是：信息冗余。
 
 空间换时间：用存储冗余来减少计算量（信息冗余）。
