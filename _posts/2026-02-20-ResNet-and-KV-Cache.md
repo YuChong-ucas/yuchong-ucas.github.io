@@ -224,11 +224,13 @@ LSTM 解决：长序列梯度消失
 
 [DeepCrossAttention: Supercharging Transformer Residual Connections](https://arxiv.org/pdf/2502.06785v2)
 
+
+
 深度交叉注意力机制能够实现不同深度层之间更丰富的交互。和上面的Attention Residuals思想咋之像呢？DeepCrossAttention文章看起来理论论证更多一点。
 
 把“层”当成“token”做 attention
 
-
+![图3](assets/image/20260220/3.png)
 
 
 **猜测**：或许结合我的上面的ResNet 与 KV Cache博文，我们不仅仅可以在算法原理上思考，也可以在计算范式上思考，进而在状态机角度进行计算效率优化，借鉴SSM/Mamba。
